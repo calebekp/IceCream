@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-medium: #8E9AAF;
+    --bg-light: #CBC0D3;
+    --bg-page: #EFF1FF;
+
+    --ct-heading: #FFFFFF;
+    --ct-texting: #23053A;
+    --ct-show: #4A4E69;
+
+    --fm-Staat: 'Staatliches', cursive;
+    --fm-Palan: 'Palanquin', sans-serif;
+
+    font-size: 62.5%; /*10px*/
+    --fss-title: 4rem;
+    --fss-texting: 2rem;
+}
+
+.page {
+    width: 38.4rem;
+    margin: 0 auto;
+
+    background: var(--bg-page);
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    height: 27.9rem;
+    background: var(--bg-medium);
+    align-items: center;
+    width: 100%;
+}
+
+header img {
+    width: 13.7rem;
+    height: 13.7rem;
+    margin-top: 3.2rem;
+    margin-bottom: 4rem;;
+}
+
+header h1 {
+    background: var(--bg-light);
+    color: var(--ct-heading);
+    font-family: var(--fm-Staat);
+    font-size: var(--fss-title);
+
+    width: 100%;
+    line-height: 3.4rem;
+    font-weight: 400;
+    letter-spacing: 0.05rem;
+    text-transform: uppercase;
+    padding: 8px 86px;
+    margin-bottom: 2.9rem;
+}
+
+main {
+    margin-top: 1.4rem;
+    padding: 0 3.2rem 6rem;
+}
+
+main p{
+    font-family: var(--fm-Palan);
+    font-size: var(--fss-texting);
+    font-weight: 400;
+
+    line-height: 1.5rem;
+    text-align: center;
+
+    width: 30.5rem;
+    height: 7.5rem;
+
+    margin-bottom: 6.3rem;
+}
+
+.cards {
+    display: flex;
+    position: relative;
+    margin-bottom: 3.2rem;
+}
+
+.cards img {
+    object-fit: cover;
+    width: 32rem;
+    border-radius: 20px;
+    animation: downtop;
+    animation-duration: 2000ms;
+}
+
+.cards h2 {
+    position: absolute;
+    top: 2.2rem;
+    right: 1.8rem;
+    
+    font-family: var(--fm-Staat);
+    font-size: var(--fss-texting);
+
+    background-color: var(--bg-page);
+    border-radius: 2rem;
+    color: var(--ct-show);
+    padding: 1px 2.2rem;
+    animation-name: topdown;
+    animation-duration: 2000ms;
+}
+
+main > div:nth-child(2),
+main > div:nth-child(4) {
+    height: 25rem;
+}
+
+main > div:nth-child(3),
+main > div:nth-child(5) {
+    height: 45rem;
+}
+
+@keyframes topdown {
+    0% {
+        opacity: 0;
+        transform: translateY(-15px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes downtop {
+    0% {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
